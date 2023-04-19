@@ -1,0 +1,26 @@
+<ng-container *ngIf="contacto_detalle.email;else noHayContacto" >
+
+  <h1>Contacto: {{ id }}</h1>
+
+  <p>Nombres : {{ contacto_detalle | nombreCompleto }}</p>
+  <p>Email : {{ contacto_detalle.email }} </p>
+
+</ng-container>
+
+
+<ng-template #noHayContacto>
+
+  <p>Error en el contacto</p>
+
+
+</ng-template>
+
+<a routerLink="/contacts" [queryParams]="{sexo: filtroPrevio}" >Volver</a>
+
+<!--
+<button (click)="regresarAContacts()">Volver a los contactos</button>
+
+-->
+
+
+
