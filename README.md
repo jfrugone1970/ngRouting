@@ -1,3 +1,18 @@
+For the execution of this Angular Ng Routing project you must open the following page in a new link:
+
+https://reqres.in/
+
+Once entered the page choose "Login - Success"
+
+This way
+
+![image](https://user-images.githubusercontent.com/6429364/233212945-139eac05-5893-409b-a94c-49b1cda5c6cb.png)
+
+The credentials are:
+Email: eve.holt@reqres.in
+Password: cityslicka
+
+
 # NgRouting
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
