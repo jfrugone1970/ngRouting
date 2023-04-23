@@ -1,6 +1,7 @@
 <h1>Juego de Amigo Invisible</h1>
 <h3>Bienvenido!</h3>
 
+<p><strong>Fecha: {{ miFecha | date: "dd/MM/YYYY" }}</strong></p>
 
 <ng-container *ngIf="contactoSeleccionado; else noSeleccionado">
 

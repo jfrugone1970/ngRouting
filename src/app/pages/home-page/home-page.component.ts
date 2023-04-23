@@ -13,6 +13,7 @@ export class HomePageComponent implements OnInit {
   public contactoSeleccionado: IContacto | undefined;
   token: string | null = null;
   public opcion: number = 0;
+  public miFecha: Date = new Date();
   constructor(private _router: Router) {}
 
   ngOnInit(): void {
