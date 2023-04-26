@@ -6,6 +6,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { ContactsPageComponent } from './pages/contacts-page/contacts-page.component';
 import { ContactDetailPageComponent } from './pages/contact-detail-page/contact-detail-page.component';
 import { AuthGuard } from './guards/auth.guard';
+import { RamdonContactPageComponent } from './pages/ramdon-contact-page/ramdon-contact-page.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,11 @@ const routes: Routes = [
   {
     path: 'contacts/:id',
     component: ContactDetailPageComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'random',
+    component: RamdonContactPageComponent,
     canActivate: [AuthGuard]
   },
   {

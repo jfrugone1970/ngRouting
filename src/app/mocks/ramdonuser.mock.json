@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Kolodar",
+        "last": "Dreveckiy"
+      },
+      "location": {
+        "street": {
+          "number": 8856,
+          "name": "Organizatorska"
+        },
+        "city": "Sokal",
+        "state": "Cherkaska",
+        "country": "Ukraine",
+        "postcode": 43658,
+        "coordinates": {
+          "latitude": "77.1730",
+          "longitude": "-88.8646"
+        },
+        "timezone": {
+          "offset": "+4:30",
+          "description": "Kabul"
+        }
+      },
+      "email": "kolodar.dreveckiy@example.com",
+      "login": {
+        "uuid": "74aeadf5-74d5-4106-809d-ac6b3a76f27e",
+        "username": "organicsnake685",
+        "password": "404040",
+        "salt": "EsYvedAV",
+        "md5": "7323287ce00eb6b7c891e0d8d1a8efd6",
+        "sha1": "2e07742141666f521d673e90d3135de85a0394f8",
+        "sha256": "09202f18d846d92a7cb2b669d34a841fea9e36af8f8a1d2e8b3905bb894b3ad9"
+      },
+      "dob": {
+        "date": "1988-10-22T08:38:24.584Z",
+        "age": 34
+      },
+      "registered": {
+        "date": "2010-02-23T02:51:28.188Z",
+        "age": 13
+      },
+      "phone": "(067) R44-9149",
+      "cell": "(067) C26-0812",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/69.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/69.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/69.jpg"
+      },
+      "nat": "UA"
+    }
+  ],
+  "info": {
+    "seed": "0b84d8505fd574e6",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}
