@@ -55,6 +55,26 @@ complete: () => console.info('Peticion de Random contacto terminada')
 
 }
 
+obtenerListaContactos(n: number) {
+
+  this._ramdomuser.obtenerListaContactos(n).subscribe((response: Results) => {
+
+    this.contact = response.results[0];
+
+    console.table(this.contact);
+
+
+},
+  (error: any) => console.error(`${error}`),
+
+);
+
 
 
 }
+
+
+
+}
+
+

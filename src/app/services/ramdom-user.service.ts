@@ -56,7 +56,13 @@ export class RamdomUserService {
 
   }
 
-  obtenerListaContactos(n: number) {
+  obtenerListaContactos(n: number): Observable<any> {
+
+    const params: HttpParams = new HttpParams().set("results", n)
+     return this._http.get('https://randomuser.me/api',{params: params}).pipe(
+      catchError(this.handleError)
+
+    );
 
 
 
