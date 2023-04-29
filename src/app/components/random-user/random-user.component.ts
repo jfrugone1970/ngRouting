@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IRandomContact } from 'src/app/models/ramdomuser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-random-user',
@@ -10,12 +11,18 @@ export class RandomUserComponent implements OnInit {
 
   @Input() randomContact: IRandomContact | undefined;
 
-  constructor() {}
+  constructor(private _router: Router) {}
 
   ngOnInit(): void {
 
 
 
+
+  }
+
+  regresarAHome() {
+
+    this._router.navigate(['home']);
 
   }
 
