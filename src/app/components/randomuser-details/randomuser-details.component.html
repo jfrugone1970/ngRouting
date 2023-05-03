@@ -1,4 +1,4 @@
-<h4>Ramdom User</h4>
+<h4>Ramdom User Seleccionado</h4>
 
 <ng-container *ngIf="randomContact;else noContact">
 
@@ -24,14 +24,7 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-
-        <button mat-button (click)="elegirContacto(randomContact.id)">Elegir como amigo Invisible</button>
-
-        <div *ngIf="randomContact.id">
-          <app-randomuser-details [randomContact]="randomContact"></app-randomuser-details>
-        </div>
-
-        <button mat-button (click)="regresarAHome()">Volver</button>
+        <button mat-button (click)="regresarARandom()">Volver</button>
       </mat-card-actions>
     </mat-card>
 
@@ -50,7 +43,4 @@
 
 
 </ng-template>
-
-
-
 

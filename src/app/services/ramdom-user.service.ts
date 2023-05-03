@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
-import { Observable, catchError, throwError } from 'rxjs';
+import { Observable, catchError, throwError, retry } from 'rxjs';
 import { IRandomContact } from '../models/ramdomuser';
 import { Results } from '../models/ramdomuser';
 
@@ -40,6 +40,7 @@ export class RamdomUserService {
 
      const params: HttpParams = new HttpParams().set("results", n)
      return this._http.get<Results[]>('https://randomuser.me/api',{params: params}).pipe(
+      retry(2), // para 2 intentos
       catchError(this.handleError)
 
     );
@@ -50,6 +51,7 @@ export class RamdomUserService {
 
     const params: HttpParams = new HttpParams().set("gender", sexo)
     return this._http.get('https://randomuser.me/api',{params: params}).pipe(
+     retry(2), // para 2 intentos
      catchError(this.handleError)
 
    );

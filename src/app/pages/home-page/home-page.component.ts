@@ -18,6 +18,8 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
 
+    // Comprobar si esta el RandomContact seleccionado
+
     // Comprobar si existe el token
     this.token = sessionStorage.getItem('token');
 
@@ -25,6 +27,7 @@ export class HomePageComponent implements OnInit {
     if(history.state.data){
       console.log(history.state.data);
       this.contactoSeleccionado = history.state.data;
+
 
     }
 

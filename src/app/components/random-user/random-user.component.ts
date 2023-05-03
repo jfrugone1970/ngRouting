@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IRandomContact } from 'src/app/models/ramdomuser';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-random-user',
@@ -23,6 +23,20 @@ export class RandomUserComponent implements OnInit {
   regresarAHome() {
 
     this._router.navigate(['home']);
+
+  }
+
+  elegirContacto(id: any) {
+
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        id: id,
+        name: this.randomContact?.name.first,
+        last: this.randomContact?.name.last
+      }
+    }
+
+    // this._router.navigate(['home'], navigationExtras)
 
   }
 

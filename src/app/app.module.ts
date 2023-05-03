@@ -16,6 +16,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { NombreCompletoPipe } from './pipes/nombre-completo.pipe';
 import { RandomUserComponent } from './components/random-user/random-user.component';
 import { RamdonContactPageComponent } from './pages/ramdon-contact-page/ramdon-contact-page.component';
+import { RandomuserDetailsComponent } from './components/randomuser-details/randomuser-details.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RamdonContactPageComponent } from './pages/ramdon-contact-page/ramdon-c
     LoginFormComponent,
     NombreCompletoPipe,
     RandomUserComponent,
-    RamdonContactPageComponent
+    RamdonContactPageComponent,
+    RandomuserDetailsComponent
   ],
   imports: [
     BrowserModule,
