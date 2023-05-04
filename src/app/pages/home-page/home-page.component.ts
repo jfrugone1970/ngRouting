@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { IContacto } from 'src/app/models/contact.interface';
 import { CONTACTOS } from 'src/app/mocks/contact.mocks';
+import { IRandomContact } from 'src/app/models/ramdomuser';
 
 @Component({
   selector: 'app-home-page',
@@ -11,6 +12,7 @@ import { CONTACTOS } from 'src/app/mocks/contact.mocks';
 export class HomePageComponent implements OnInit {
 
   public contactoSeleccionado: IContacto | undefined;
+  public contactorandomseleccionado: IRandomContact | undefined;
   token: string | null = null;
   public opcion: number = 0;
   public miFecha: Date = new Date();
@@ -27,6 +29,8 @@ export class HomePageComponent implements OnInit {
     if(history.state.data){
       console.log(history.state.data);
       this.contactoSeleccionado = history.state.data;
+      this.contactorandomseleccionado = history.state.data;
+
 
 
     }

@@ -26,18 +26,21 @@ export class RandomUserComponent implements OnInit {
 
   }
 
-  elegirContacto(id: any) {
+  elegirContacto(contacto: IRandomContact) {
 
     let navigationExtras: NavigationExtras = {
-      queryParams: {
-        id: id,
-        name: this.randomContact?.name.first,
-        last: this.randomContact?.name.last
+      state: {
+        data: contacto
       }
     }
 
-    // this._router.navigate(['home'], navigationExtras)
+    this._router.navigate(['/home'], navigationExtras);
+
+
+
 
   }
+
+
 
 }

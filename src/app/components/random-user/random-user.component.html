@@ -25,11 +25,8 @@
       </mat-card-content>
       <mat-card-actions>
 
-        <button mat-button (click)="elegirContacto(randomContact.id)">Elegir como amigo Invisible</button>
+        <button mat-button (click)="elegirContacto(randomContact)">Elegir como amigo Invisible</button>
 
-        <div *ngIf="randomContact.id">
-          <app-randomuser-details [randomContact]="randomContact"></app-randomuser-details>
-        </div>
 
         <button mat-button (click)="regresarAHome()">Volver</button>
       </mat-card-actions>
