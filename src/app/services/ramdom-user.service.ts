@@ -36,10 +36,16 @@ export class RamdomUserService {
 
   }
 
-  obtenerRandomContacts(n: number): Observable<Results[]> {
+  obtenerRandomContacts(n: number, sexo:string): Observable<Results> {
 
-     const params: HttpParams = new HttpParams().set("results", n)
-     return this._http.get<Results[]>('https://randomuser.me/api',{params: params}).pipe(
+     let params: HttpParams = new HttpParams().set("results", n)
+
+     if(sexo){
+      console.log('Filtrado por Hombre/Mujer');
+      params = params.append("gender",sexo);
+     }
+
+     return this._http.get<Results>('https://randomuser.me/api',{params: params}).pipe(
       retry(2), // para 2 intentos
       catchError(this.handleError)
 
@@ -47,7 +53,7 @@ export class RamdomUserService {
 
   }
 
-  obtenerRandomContactsPorGenero(sexo: string): Observable<any> {
+  obtenerRandomContactsPorGenero(n: number,sexo: string): Observable<any> {
 
     const params: HttpParams = new HttpParams().set("gender", sexo)
     return this._http.get('https://randomuser.me/api',{params: params}).pipe(

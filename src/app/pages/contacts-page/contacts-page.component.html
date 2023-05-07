@@ -2,10 +2,11 @@
 
 <!-- Listar los contactos-->
 
-<div *ngFor="let contacto of listaContactos; let i=index">
+<div *ngFor="let contacto of listaRandomContact; let i=index">
 
-   <div routerLink="{{contacto.id}}" [state]="{data: contacto, filtro: filtroSexo}" >
-      <h6 class="lista_contacto">{{ contacto.nombre }}</h6>
+   <div routerLink="{{contacto.id.name}}" [state]="{data: contacto, filtro: filtroSexo}" >
+      <h6 class="lista_contacto">{{ contacto.name.first }}</h6>
+      <h6 class="lista_contacto">{{ contacto.name.last }}</h6>
    </div>
 
    <button (click)="regresarAHome(contacto)">Enviar Contacto y Regresar a Home</button>
@@ -13,7 +14,7 @@
 
 </div>
 
-<ng-container *ngIf="filtroSexo == 'mujer' || filtroSexo == 'hombre' ;else elseTemplate">
+<ng-container *ngIf="filtroSexo == 'female' || filtroSexo == 'male' ;else elseTemplate">
 
   <p>Mostrando la lista filtrada</p>
   <p>Mostrando amigos filtrado por : {{ filtroSexo }}</p>

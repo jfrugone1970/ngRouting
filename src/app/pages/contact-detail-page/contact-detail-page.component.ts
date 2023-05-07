@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { CONTACTOS } from 'src/app/mocks/contact.mocks';
 import { IContacto } from 'src/app/models/contact.interface';
+import { IRandomContact } from 'src/app/models/ramdomuser';
 import { NombreCompletoPipe } from 'src/app/pipes/nombre-completo.pipe';
 
 @Component({
@@ -12,13 +13,7 @@ import { NombreCompletoPipe } from 'src/app/pipes/nombre-completo.pipe';
 })
 export class ContactDetailPageComponent implements OnInit {
 
-  public contacto_detalle: IContacto = {
-    id: 0,
-    nombre: '',
-    apellidos: '',
-    email: '',
-    sexo: 'mujer'
-  }
+  public contacto_detalle: IRandomContact | undefined;
 
   public id: any | undefined;
   public filtroPrevio: string = 'todos';

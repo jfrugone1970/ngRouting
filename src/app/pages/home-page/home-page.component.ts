@@ -11,7 +11,7 @@ import { IRandomContact } from 'src/app/models/ramdomuser';
 })
 export class HomePageComponent implements OnInit {
 
-  public contactoSeleccionado: IContacto | undefined;
+  public contactoSeleccionado: IRandomContact | undefined;
   public contactorandomseleccionado: IRandomContact | undefined;
   token: string | null = null;
   public opcion: number = 0;
@@ -28,7 +28,6 @@ export class HomePageComponent implements OnInit {
     // Leemos del Estado de Historia de Navegacion
     if(history.state.data){
       console.log(history.state.data);
-      this.contactoSeleccionado = history.state.data;
       this.contactorandomseleccionado = history.state.data;
 
 
