@@ -32,3 +32,16 @@ mat-form-field{
   width: 100%;
 
 }
+
+.fecha-form-field {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.fecha-header-label {
+  flex: 1;
+  height: 1em;
+  font-weight: 500;
+  text-align: center;
+}

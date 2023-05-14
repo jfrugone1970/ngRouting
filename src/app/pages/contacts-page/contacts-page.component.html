@@ -9,10 +9,12 @@
       <h6 class="lista_contacto">{{ contacto.name.last }}</h6>
    </div>
 
-   <button (click)="regresarAHome(contacto)">Enviar Contacto y Regresar a Home</button>
+   <button mat-raised-button color="primary" (click)="regresarAHome(contacto)">Enviar Contacto y Regresar a Home</button>
 
 
 </div>
+
+<mat-spinner></mat-spinner>
 
 <ng-container *ngIf="filtroSexo == 'female' || filtroSexo == 'male' ;else elseTemplate">
 

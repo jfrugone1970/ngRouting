@@ -25,12 +25,27 @@ export class HomePageComponent implements OnInit {
     // Comprobar si existe el token
     this.token = sessionStorage.getItem('token');
 
+    // Verificar token
+    this.verifica_token();
+
+
     // Leemos del Estado de Historia de Navegacion
     if(history.state.data){
       console.log(history.state.data);
       this.contactorandomseleccionado = history.state.data;
 
 
+
+    }
+
+
+  }
+
+  verifica_token() {
+
+    // Regresa a login si no hay token
+    if(!this.token){
+      this._router.navigate(['login']);
 
     }
 

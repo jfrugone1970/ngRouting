@@ -1,5 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+// DatePicker
+
+
 
 // Importamos todo lo necesario para el formulario Reactivo
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -58,3 +61,5 @@ export class LoginFormComponent implements OnInit {
   }
 
 }
+
+
