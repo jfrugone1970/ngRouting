@@ -20,12 +20,7 @@ export class AppComponent implements OnInit {
 
   }
 
-  logout(): void {
 
-    sessionStorage.removeItem('token');
-    this._router.navigate(['login']);
-
-  }
 
 
 

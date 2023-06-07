@@ -7,23 +7,46 @@ import { ContactsPageComponent } from './pages/contacts-page/contacts-page.compo
 import { ContactDetailPageComponent } from './pages/contact-detail-page/contact-detail-page.component';
 import { AuthGuard } from './guards/auth.guard';
 import { RamdonContactPageComponent } from './pages/ramdon-contact-page/ramdon-contact-page.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { TasksPageComponent } from './pages/tasks-page/tasks-page.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home'
+    redirectTo: 'dashboard'
   },
   {
-    path: 'home',
-    component: HomePageComponent,
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuard],
     children: [
       {
-        path: 'hijo',
-        component: HomePageComponent
+        path: 'home',
+        component: HomePageComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'contacts',
+        component: ContactsPageComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'contacts/:id',
+        component: ContactDetailPageComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'tasks',
+        component: TasksPageComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'random',
+        component: RamdonContactPageComponent,
+        canActivate: [AuthGuard]
       }
-    ],
-    canActivate: [AuthGuard]
+    ]
   },
   {
     path: 'login',

@@ -9,6 +9,7 @@ import { NavigationExtras, Router } from '@angular/router';
 })
 export class RandomUserComponent implements OnInit {
 
+
   @Input() randomContact: IRandomContact | undefined;
 
   constructor(private _router: Router) {}

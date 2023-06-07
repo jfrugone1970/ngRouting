@@ -11,6 +11,7 @@ import { IRandomContact, Results } from 'src/app/models/ramdomuser';
 })
 export class ContactsPageComponent implements OnInit {
 
+  public cargando: boolean = true;
   public filtroSexo: string = 'todos';
   public listaRandomContact: IRandomContact[] = [];
   public numrandom: number = 10;
@@ -39,7 +40,6 @@ export class ContactsPageComponent implements OnInit {
             {
               next: (response: Results) => {
                 console.log(response);
-
                 response.results.forEach((randomContact: IRandomContact, index: number) => {
                   this.listaRandomContact.push(randomContact);
 
@@ -47,7 +47,10 @@ export class ContactsPageComponent implements OnInit {
 
               },
               error: (error) => console.log(`${error}`),
-              complete: () => console.info('Peticion de random contacts terminado')
+              complete: () => {
+                console.info('Peticion de random contacts terminado')
+                this.cargando = false;
+              }
             }
           )
 
@@ -60,7 +63,7 @@ export class ContactsPageComponent implements OnInit {
             {
               next: (response: Results) => {
                 console.log(response);
-
+                this.cargando = false;
                 response.results.forEach((randomContact: IRandomContact, index: number) => {
                   this.listaRandomContact.push(randomContact);
 
@@ -68,7 +71,12 @@ export class ContactsPageComponent implements OnInit {
 
               },
               error: (error) => console.log(`${error}`),
-              complete: () => console.info('Peticion de random contacts terminado')
+              complete: () => {
+                console.info('Peticion de random contacts terminado')
+                this.cargando = false;
+              }
+
+
             }
           )
 
@@ -91,7 +99,7 @@ export class ContactsPageComponent implements OnInit {
 
     }
 
-    this._router.navigate(['/home'], navigationExtras);
+    this._router.navigate(['/dashboard'], navigationExtras);
 
   }
 

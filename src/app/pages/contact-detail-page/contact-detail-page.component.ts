@@ -49,7 +49,7 @@ export class ContactDetailPageComponent implements OnInit {
 
   regresarAContacts(): void{
 
-    this._router.navigate(['contacts']);
+    this._router.navigate(['/dashboard/contacts']);
 
 
   }

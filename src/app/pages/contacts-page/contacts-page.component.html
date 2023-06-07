@@ -1,5 +1,11 @@
 <h1>Tus contactos ====> :</h1>
 
+<div *ngIf="cargando">
+
+   <mat-spinner></mat-spinner>
+   <h6>Cargando tu lista de contactos....</h6>
+</div>
+
 <!-- Listar los contactos-->
 
 <div *ngFor="let contacto of listaRandomContact; let i=index">
@@ -28,7 +34,7 @@
 
 </ng-template>
 
-<a *ngIf="token" routerLink="/home">Volver</a>
+<a *ngIf="token" routerLink="/dashboard">Volver</a>
 
 
 

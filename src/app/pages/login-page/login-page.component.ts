@@ -17,7 +17,7 @@ export class LoginPageComponent implements OnInit {
     let token = sessionStorage.getItem('token');
 
     if(token){
-      this._router.navigate(['home']);
+      this._router.navigate(['dashboard']);
 
     }
 
@@ -31,7 +31,7 @@ export class LoginPageComponent implements OnInit {
       (response) => {
         if(response.token){
           sessionStorage.setItem('token', response.token);
-          this._router.navigate(['home']);
+          this._router.navigate(['dashboard']);
 
         }
       },
