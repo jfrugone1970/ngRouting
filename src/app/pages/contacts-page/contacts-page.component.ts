@@ -99,7 +99,7 @@ export class ContactsPageComponent implements OnInit {
 
     }
 
-    this._router.navigate(['/dashboard'], navigationExtras);
+    this._router.navigate(['/dashboard/home'], navigationExtras);
 
   }
 

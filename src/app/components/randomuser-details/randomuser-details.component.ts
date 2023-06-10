@@ -21,7 +21,7 @@ export class RandomuserDetailsComponent implements OnInit {
 
   regresarARandom() {
 
-      this._router.navigate(['random']);
+      this._router.navigate(['/dashboard/random']);
 
 
   }

@@ -23,7 +23,7 @@ export class RandomUserComponent implements OnInit {
 
   regresarAHome() {
 
-    this._router.navigate(['home']);
+    this._router.navigate(['/dashboard/home']);
 
   }
 
@@ -35,7 +35,7 @@ export class RandomUserComponent implements OnInit {
       }
     }
 
-    this._router.navigate(['/home'], navigationExtras);
+    this._router.navigate(['/dashboard/home'], navigationExtras);
 
 
 
