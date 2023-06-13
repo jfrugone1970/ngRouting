@@ -16,7 +16,7 @@ export class NotFoundPageComponent implements OnInit {
 
   regresarAInicio(): void {
 
-    this._router.navigate(['/dashboard/home']);
+    this._router.navigate(['/dashboard']);
 
 
   }
