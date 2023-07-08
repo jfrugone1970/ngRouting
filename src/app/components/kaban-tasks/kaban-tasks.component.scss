@@ -51,3 +51,27 @@
   opacity: 0;
 }
 
+// Estilos para niveles de tareas
+.info-task {
+  color: rgb(238, 160, 15);
+}
+
+.urgent-task {
+  color: rgb(240, 93, 67);
+}
+
+.blocking-task {
+  color: rgb(92, 230, 92);
+
+}
+
+.msg-enhorabuena {
+   color: greenyellow;
+   font-weight: bold;
+}
+
+.msg-trabajar {
+  color: tomato;
+  font-weight: bold;
+
+}
