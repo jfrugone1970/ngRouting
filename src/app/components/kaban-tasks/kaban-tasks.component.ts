@@ -10,7 +10,10 @@ import { Itask, LEVELS } from 'src/app/models/tasks.interface';
   styleUrls: ['./kaban-tasks.component.scss'],
 })
 export class KabanTasksComponent {
-[x: number]: string|CdkDropList<any>|(string|CdkDropList<any>)[];
+/*
+[x: number]: string|CdkDropList<any>|(string|CdkDropList<any>)[];*/
+doneList: any|CdkDropList<any>|(string|CdkDropList<any>)[];
+todoList: any|CdkDropList<any>|(string|CdkDropList<any>)[];
 
   todoTasks: Itask[] = [
     {
@@ -86,27 +89,6 @@ export class KabanTasksComponent {
     },
     {
       id: 5,
-      title: 'Directivas',
-      description: 'Aprender a gestionar directivas en Angular',
-      completed: true,
-      level: LEVELS.URGENT
-    },
-    {
-      id: 6,
-      title: 'Pipe',
-      description: 'Aprender a gestionar PIPE en Angular',
-      completed: true,
-      level: LEVELS.BLOCKING
-    },
-    {
-      id: 7,
-      title: 'HTTP',
-      description: 'Aprender a gestionar peticiones HTTP en Angular',
-      completed: true,
-      level: LEVELS.BLOCKING
-    },
-    {
-      id: 8,
       title: 'Angular Material',
       description: 'Aprender a gestionar Angular Material y sus Schematics',
       completed: true,
