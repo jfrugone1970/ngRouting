@@ -9,7 +9,6 @@ import { Itask, LEVELS } from 'src/app/models/tasks.interface';
 export class TaskComponent implements OnInit {
 
   @Input() task: Itask = {
-    id: 0,
     title: 'Titulo por defecto',
     description: 'Descripcion por defecto',
     level: LEVELS.INFO,

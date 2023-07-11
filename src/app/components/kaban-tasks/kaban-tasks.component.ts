@@ -12,19 +12,15 @@ import { Itask, LEVELS } from 'src/app/models/tasks.interface';
 export class KabanTasksComponent {
 /*
 [x: number]: string|CdkDropList<any>|(string|CdkDropList<any>)[];*/
-doneList: any|CdkDropList<any>|(string|CdkDropList<any>)[];
-todoList: any|CdkDropList<any>|(string|CdkDropList<any>)[];
 
   todoTasks: Itask[] = [
     {
-      id: 0,
       title: 'Animaciones',
       description: 'Aprender animaciones en Angular',
       completed: false,
       level: LEVELS.INFO
     },
     {
-      id: 1,
       title: 'Angular Cli',
       description: 'Comandos y configuraciones en Angular',
       completed: false,
@@ -32,14 +28,12 @@ todoList: any|CdkDropList<any>|(string|CdkDropList<any>)[];
 
     },
     {
-      id: 2,
       title: 'Build',
       description: 'Aprender a generar Build con Angular Cli',
       completed: false,
       level: LEVELS.BLOCKING
     },
     {
-      id: 3,
       title: 'Deploy',
       description: 'Aprender a desplegar bundles en Angular Cli',
       completed: false,
@@ -51,7 +45,6 @@ todoList: any|CdkDropList<any>|(string|CdkDropList<any>)[];
 
   doneTasks: Itask[] = [
     {
-      id: 0,
       title: 'VS-Code',
       description: 'Configurar e instalar Plugins en VS-CODE',
       completed: true,
@@ -59,7 +52,6 @@ todoList: any|CdkDropList<any>|(string|CdkDropList<any>)[];
 
     },
     {
-      id: 1,
       title: 'Instalar Angular',
       description: 'Instalar con npm el Angular Cli',
       completed: true,
@@ -67,34 +59,33 @@ todoList: any|CdkDropList<any>|(string|CdkDropList<any>)[];
 
     },
     {
-      id: 2,
       title: 'Hola mundo',
       description: 'Crear con Angular Cli proyecto inicial',
       completed: true,
       level: LEVELS.URGENT
     },
     {
-      id: 3,
       title: 'Componentes',
       description: 'Aprender a gestionar componentes en Angular',
       completed: true,
       level: LEVELS.BLOCKING
     },
     {
-      id: 4,
       title: 'Servicios',
       description: 'Aprender a gestionar servicios en Angular',
       completed: true,
       level: LEVELS.URGENT
     },
     {
-      id: 5,
       title: 'Angular Material',
       description: 'Aprender a gestionar Angular Material y sus Schematics',
       completed: true,
       level: LEVELS.URGENT
     }
   ]
+  doneList!: string | CdkDropList<any> | (string | CdkDropList<any>)[];
+  todoList!: string | CdkDropList<any> | (string | CdkDropList<any>)[];
+
 
   drop(event: CdkDragDrop<Itask[]>): void {
     if (event.previousContainer === event.container) {
