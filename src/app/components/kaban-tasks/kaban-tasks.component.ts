@@ -83,8 +83,6 @@ export class KabanTasksComponent {
       level: LEVELS.URGENT
     }
   ]
-  doneList!: string | CdkDropList<any> | (string | CdkDropList<any>)[];
-  todoList!: string | CdkDropList<any> | (string | CdkDropList<any>)[];
 
 
   drop(event: CdkDragDrop<Itask[]>): void {
