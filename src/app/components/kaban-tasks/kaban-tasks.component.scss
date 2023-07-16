@@ -1,3 +1,12 @@
+.container_uno {
+  width: 400px;
+  max-width: 100%;
+  margin: 0 20px;
+  display: inline-block;
+  vertical-align: top;
+
+}
+
 .container {
   width: 400px;
   max-width: 100%;
@@ -66,12 +75,19 @@
 }
 
 .msg-enhorabuena {
-   color: greenyellow;
+   color: rgb(162, 235, 54);
+   border: 1px solid black;
    font-weight: bold;
 }
 
 .msg-trabajar {
-  color: tomato;
+  color: rgb(235, 80, 53);
+  border: 1px solid black;
   font-weight: bold;
+
+}
+
+.completed-task {
+  background-color: aliceblue;
 
 }
