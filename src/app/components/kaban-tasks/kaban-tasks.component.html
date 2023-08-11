@@ -9,8 +9,8 @@
         <h4 class="msg-enhorabuena">En horabuena!!! No tienes tareas Pendientes, puedes irte a casa </h4>
       </ng-container>
 
-      <div [ngClass]="{'completed-task': task.completed}" class="list-item" *ngFor="let task of todoTasks" cdkDrag>
-        <app-task [task]="task"></app-task>
+      <div appMouseOver="tomato" defaultColor="green" [ngClass]="{'completed-task': task.completed}" class="list-item" *ngFor="let task of todoTasks" cdkDrag>
+        <app-task appLifeCycle [task]="task"></app-task>
 
         <!--
         <div [ngClass]="{'info-task': task.level === 0, 'urgent-task': task.level === 1, 'blocking-task': task.level === 2}">
@@ -37,8 +37,8 @@
           <h4 class="msg-trabajar">No tienes tareas completadas!!!. Ponte las pilas</h4>
         </ng-container>
 
-      <div [ngClass]="{'completed-task': task.completed}" class="list-item" *ngFor="let task of doneTasks" cdkDrag>
-        <app-task [task]="task"></app-task>
+      <div appMouseOver="ligthgreen" defaultColor="ligthgreen" [ngClass]="{'completed-task': task.completed}" class="list-item" *ngFor="let task of doneTasks" cdkDrag>
+        <app-task appLifeCycle [task]="task"></app-task>
         <!--
         <div [ngClass]="{'info-task': task.level === 0, 'urgent-task': task.level === 1, 'blocking-task': task.level === 2}">
           <h5>{{task.title}}</h5>

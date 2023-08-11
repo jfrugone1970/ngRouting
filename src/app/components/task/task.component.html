@@ -1,4 +1,24 @@
-<div [ngClass]="{'info-task': task.level === 0, 'urgent-task': task.level === 1, 'blocking-task': task.level === 2, 'completed-task': task.completed}">
+<div>
+  <div>
+
+    <div [ngSwitch]="task.level" [ngClass]="
+         {'info-task': task.level === 0,
+         'urgent-task': task.level === 1,
+         'blocking-task': task.level === 2,
+         'completed-task': task.completed}">
+      <mat-icon *ngSwitchCase="0">
+        info
+      </mat-icon>
+      <mat-icon *ngSwitchCase="1">
+        warning
+      </mat-icon>
+      <mat-icon *ngSwitchCase="2">
+        dangerous
+      </mat-icon>
+      <p *ngSwitchDefault>info</p>
+    </div>
+
+  </div>
   <h5>{{task.title}}</h5>
   <h6>{{task.description}}</h6>
 </div>

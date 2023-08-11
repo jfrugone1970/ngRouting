@@ -8,6 +8,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [],
@@ -21,7 +22,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatButtonModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatIconModule
   ]
 })
 export class MaterialModule { }
