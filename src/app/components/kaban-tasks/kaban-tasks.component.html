@@ -37,7 +37,7 @@
           <h4 class="msg-trabajar">No tienes tareas completadas!!!. Ponte las pilas</h4>
         </ng-container>
 
-      <div appMouseOver="ligthgreen" defaultColor="ligthgreen" [ngClass]="{'completed-task': task.completed}" class="list-item" *ngFor="let task of doneTasks" cdkDrag>
+      <div appMouseOver="lightgreen" defaultColor="lightgreen" [ngClass]="{'completed-task': task.completed}" class="list-item" *ngFor="let task of doneTasks" cdkDrag>
         <app-task appLifeCycle [task]="task"></app-task>
         <!--
         <div [ngClass]="{'info-task': task.level === 0, 'urgent-task': task.level === 1, 'blocking-task': task.level === 2}">
